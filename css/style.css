@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@500&display=swap');
+
+body, main{
+    padding: 0px;
+    margin: 0px;
+}
+
+/* Header y barra de navegación */
+
+header{
+    width: 100%;
+    height: 10vh;
+}
+
+header nav{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #326796e8;
+}
+
+header nav ol{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-items: center;
+}
+
+header nav ol li{
+    list-style: none;
+    padding: 5px 10px;
+    font-family: 'Barlow', sans-serif;
+    font-size: 1.5rem;
+    color: azure;
+}
+
+header nav ol li:hover{
+    background-color: #6183a071;
+    cursor: pointer;
+}
+
+/* Banner */
+
+.container{
+    width: 100%;
+    height: 90vh;
+   
+}
+
+
+.container .filter{
+    width: 100%;
+    height: 90vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+ .filter .col-60{
+    width: 60%;
+    margin-left: 100px;
+}
+
+.filter .col-60 h2{
+    font-family: "Gill Sans Extrabold", Helvetica, sans-serif;
+    font-size: 2.8rem;
+    color: #2268A5;
+    margin-top: 0px;
+    margin-bottom: 4px;
+}
+
+ .filter .col-60 p{
+    font-family: 'Barlow', sans-serif;
+    font-size: 1.5rem;
+    color: #000000;
+}
+
+.filter .col-60 button{
+    width: 30%;
+    padding: 7px 10px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Barlow', sans-serif;
+    font-size: 1.5rem;
+    background-color: #2268A5;
+    color: azure;
+}
+ .filter .col-60 button:hover{
+    background-color: #8EC543;
+    color: hsl(0, 100%, 100%);
+    cursor: pointer;
+}
+
+/*-----768px----*/
+@media screen and (min-width: 500px) and (max-width: 768px) {
+
+    header nav ol li {
+        font-size:25px;
+    
+    }
+
+   .filter .col-60 h2 {
+        font-size: 45px;
+ }
+
+  .filter .col-60 p {
+        font-size: 25px;
+ }
+ .filter .col-60 button {
+     width:300px;
+     font-size: 25px;
+     margin-top: 30px;
+
+ }
+
+}
+
+
+/*-----425px----*/
+@media screen and (min-width: 320px) and (max-width: 425px) {
+    header nav ol {
+        flex-direction: column;
+        height: 300px;
+        text-align: center;
+        padding-left: 0;
+        
+    }
+    header nav ol li {
+        font-size: 30px;
+        justify-content: center;
+    }
+
+    header nav {
+        height: 40vh;
+    }
+    .container{
+        height: 60vh;
+    }
+     .filter{
+        height: 60vh;
+        margin-top:160px
+    }
+
+     .filter .col-60 h2 {
+        font-size: 25px;
+    }
+
+     .filter .col-60 p {
+        font-size: 20px;
+    }
+
+     .filter .col-60 button {
+        width: 150px;
+        font-size: 20px;
+    }
+
+    .container-main .row{
+        flex-direction: column;
+    }
+    .container-main .row .col-30{
+        width: 80%;
+    }
+
+    .container-main .row .col-30 h2{
+        font-size: 25px;
+    }
+
+    .container-main .row .col-30 p{
+        font-size: 20px;
+    }
+
+}
+.banner{
+    width: 100%;
+    height: 90vh;
+}
+
+.banner .row{
+    display: flex;
+    width: 300%;
+    height: 50vh;
+    animation: banner 12s infinite;
+    transition: 3s all;
+}
+
+.banner .row .col-100{
+    width: 100%;
+    height: 90vh;
+    overflow: hidden;
+}
+
+.banner .row .col-100 img{
+    width: 100%;
+}
+
+@keyframes banner{
+    30%{
+        margin-left: -100%;
+    }
+
+    31%, 45%{
+        margin-left: -100%;
+    }
+
+    46%, 55%{
+        margin-left: -200%;
+    }
+    56%, 66%{
+        margin-left: -200%;
+    }
+    67%, 99%{
+        margin-left: 0px;
+    }
+}
+
+@media(max-width: 768px){
+    .banner{
+        height: 45vh;
+    }
+
+    .banner .row{
+        height: 45vh;
+    }
+    
+    .banner .row .col-100{
+        height: 45vh;
+    }
+}
+
+@media(max-width: 370px){
+    .banner{
+        height: 30vh;
+    }
+
+    .banner .row{
+        height: 30vh;
+    }
+    
+    .banner .row .col-100{
+        height: 30vh;
+    }
+}
